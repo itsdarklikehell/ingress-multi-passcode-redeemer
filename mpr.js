@@ -33,7 +33,7 @@ function nextCode () {
 
 function addCode (code) {
     code = String(code).replace(/[^a-zA-Z0-9]/g, '').toLowerCase().trim();
-    if ( code && codes.indexOf(code) === -1 && oldCodes.indexOf(code) !== -1 ) {
+    if ( code && codes.indexOf(code) === -1 && oldCodes.indexOf(code) === -1 ) {
         codes.push(code);
     }
     else {
