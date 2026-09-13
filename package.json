@@ -1,0 +1,23 @@
+{
+  "name": "ingress-multi-passcode-redeemer",
+  "version": "1.0.0",
+  "description": "Een tool om meerdere Ingress passcodes in één keer in te lijsten op [intel.ingress.com](https://intel.ingress.com/).",
+  "main": "mpr.js",
+  "scripts": {
+    "lint": "node --check mpr.js",
+    "test": "node --check mpr.js",
+    "check": "node --check mpr.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hmol33/ingress-multi-passcode-redeemer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/hmol33/ingress-multi-passcode-redeemer/issues"
+  },
+  "homepage": "https://github.com/hmol33/ingress-multi-passcode-redeemer#readme"
+}
