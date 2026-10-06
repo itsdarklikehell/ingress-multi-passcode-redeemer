@@ -19,7 +19,37 @@ Voeg tijdens de draai nieuwe codes toe met:
 addCode("JE_CODE_HIER");
 ```
 
-`addCode` valideert de code automatisch (alleen a-z, 0-9, hoofdletters worden kleine omgezet) en slaat herhalingen op zodat een code niet twee keer wordt verstukt.
+Of voeg meerdere codes tegelijk toe:
+
+```
+addCodes(["CODE1", "CODE2", "CODE3"]);
+```
+
+`addCode` valideert de code automatisch (alleen a-z, 0-9, hoofdletters worden kleine omgezet) en slaat herhalingen op zodat een code niet twee keer wordt verstuurd.
+
+## Functieoverzicht
+
+| Functie | Beschrijving |
+|---------|-------------|
+| `addCode(code)` | Voeg één code toe aan de wachtrij |
+| `addCodes([...])` | Voeg meerdere codes tegelijk toe |
+| `clearCodes()` | Wis alle codes uit de wachtrij |
+| `showCodes()` | Toon alle codes in de wachtrij |
+| `pause()` | Pauzeer het versturen |
+| `resume()` | Hervat het versturen |
+| `setConfig(key, value)` | Wijzig configuratie runtime |
+
+## Configuratie
+
+De tool heeft aanpasbare timing parameters:
+
+```javascript
+setConfig('delayMin', 10000);      // minimale wachttijd (ms)
+setConfig('delayMax', 15000);      // maximale wachttijd (ms)
+setConfig('tooHotDelay', 1800000); // wachttijd na "too hot" (ms)
+setConfig('statusCheckDelay', 15000); // wachttijd voor statuscontrole (ms)
+setConfig('emptyListDelay', 10000); // wachttijd wanneer lijst leeg is (ms)
+```
 
 ## Hoe het werkt
 
@@ -31,7 +61,6 @@ addCode("JE_CODE_HIER");
 
 - Codes zijn eenvoudig tekstvelden — deze tool verstuurt ze letterlijk. Gebruik alleen codes die je zelf hebt ontvangen of die legitiem zijn.
 - Je kunt de console sluiten of de pagina vernieuwen om het proces te stoppen; de teller gaat daarna van start bij de eerste code.
-
 
 ---
 
